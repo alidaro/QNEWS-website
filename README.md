@@ -1,8 +1,8 @@
 # README проекта QNEWS 📰
 
 ![image](https://github.com/alidaro/QNEWS-website/assets/164050493/b91969d0-10ee-480e-a36c-3b4b70876b67)
-![image](https://github.com/alidaro/QNEWS-website/assets/164050493/eb4396a9-e5ca-41d7-abe0-8a64b3d9ddc9)
 ![image](https://github.com/alidaro/QNEWS-website/assets/164050493/20d581ef-5d4d-424a-b85f-5f43ea73761c)
+![image](https://github.com/alidaro/QNEWS-website/assets/164050493/eb4396a9-e5ca-41d7-abe0-8a64b3d9ddc9)
 
 
 
