@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="new-icon" href="./images/uplogo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QazaqstanNews</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./images/mainlogo.png" alt="QazaqNews">
+            </a>
+            <button id="prev-page"><</button>
+            <span id="current-page">1</span>
+            <button id="next-page">></button>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="Kazakhstan" onclick="onNavItemClick('Kazakhstan Tokayev')">Казахстан в СМИ</li>
+                    <li class="hover-link nav-item" id="Паводки" onclick="onNavItemClick('Паводки')">Срочные Новости</li>
+                    <li class="hover-link nav-item" id="Politics Kazakhstan" onclick="onNavItemClick('Kazakhstan Kyrgyzstan')">Политика</li>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Не заходить!</a>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="пример: Паводки">
+                <button id="search-button" class="search-button">Искать</button>
+            </div>
+            <img src="images/moon.png" id="icon">
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            </div>
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+    <script>  var page = 1;
+        var url = 'https://newsapi.org/v2/everything?' +
+                  'q=&' +
+                  'from=2023-01-20&' +
+                  'pageSize=20&' +
+                  'language=en&' +
+                  'page=' + page + '&' +
+                  'sortBy=-publishedAt&' +
+                  'apiKey=35cf744aaec34cbb9ec07153612989cd';
+      </script>
+
+    <script>
+
+        var icon = document.getElementById("icon")
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme")
+            if(document.body.classList.contains("dark-theme")){
+                icon.src = "images/sun.png"
+            }else{
+                icon.src = "images/moon.png"
+            }
+
+        }
+
+    </script>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h2>Обо мне</h2>
+            <h2>Программист и энтузиаст в ML</h2>
+            <h3>(Please pick me :D)</h3>
+          </div>
+          <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>+7 (771)-159-723-27</p>
+            <p>panaguzhiyev@gmail.com</p>
+          </div>
+          <div class="footer-section">
+            <h4>Следите за нами</h4>
+            <a href="https://web.telegram.org/k/#thewindsoffreedomblows">Telegram</a>
+            <a href="https://www.instagram.com/___d4rr/">Instagram</a>
+          </div>
+          <div class="footer-section">
+            <h4>Правовая информация</h4>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия использования</a>
+          </div>
+          <div class="footer-section">
+            <h4>Спонсоры</h4>
+            <a href="https://www.instagram.com/nfactorial.school/?hl=en">nFactorial</a>
+            <a href="https://www.chevron.com/">Chevron</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Qazaq News. Все права защищены.</p>
+        </div>
+      </footer>
+      
+</body>
+</html>
